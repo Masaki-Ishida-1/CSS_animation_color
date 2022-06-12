@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:800,900");
+
+:root {
+  --colors: 1500ms;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  background: #1e152a;
+}
+
+h1 {
+  color: black;
+  font-size: 10rem;
+  font-weight: 900;
+  letter-spacing: 15px;
+  /* margin: 0;
+  text-transform: uppercase;
+  text-align: center; */
+}
+
+/* 行ったり来たりするalternate */
+.container h1 span:nth-child(1) {
+  animation: colors 1500ms infinite alternate;
+}
+
+/* 0.~s dilayをかける */
+.container h1 span:nth-child(2) {
+  animation: colors 1500ms 0.2s infinite alternate;
+}
+.container h1 span:nth-child(3) {
+  animation: colors 1500ms 0.4s infinite alternate;
+}
+.container h1 span:nth-child(4) {
+  animation: colors 1500ms 0.6s infinite alternate;
+}
+.container h1 span:nth-child(5) {
+  animation: colors 1500ms 0.8s infinite alternate;
+}
+
+@keyframes colors {
+  0% {
+    color :#d9d5dd;
+  }
+
+  25% {
+    color: #99cf88;
+  }
+
+  50% {
+    color: rgb(146, 231, 203);
+  }
+
+  75% {
+    color: rgb(33, 20, 211);
+  }
+
+  100% {
+    color: rgb(224, 123, 128);
+  }
+}
